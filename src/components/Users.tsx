@@ -1,9 +1,7 @@
 import { MRT_ColumnDef } from 'material-react-table';
-import DataTable from '../shared/DataTable/DataTable';
-import { FilterOption } from '../shared/DataTable/DataTable.types';
 import { Box, IconButton } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-
+import DataTable from '../shared/DataTable/DataTable';
 
 type User = {
   firstName: string;
@@ -57,36 +55,36 @@ function Users() {
     },
   ];
 
-  const filters: FilterOption[] = [
-    {
-      label: 'Type',
-      labelKey: 'type',
-      type: 'radio', // Ensure this is explicitly one of the allowed values
-      options: { full_time: 'Full Time', part_time: 'Part Time' },
-    },
-    {
-      label: 'Department',
-      labelKey: 'department',
-      type: 'dropdown',
-      options: { hr: 'HR', engineering: 'Engineering', sales: 'Sales' },
-    },
-    {
-      label: 'Location',
-      labelKey: 'location',
-      type: 'checkbox',
-      options: { remote: 'Remote', onsite: 'Onsite' },
-    },
-    // {
-    //   label: 'Date',
-    //   labelKey: 'date',
-    //   type: 'date',
-    // },
-    // {
-    //   label: 'Date Range',
-    //   labelKey: 'date_range',
-    //   type: 'date_range',
-    // },
-  ];
+  // const filters: FilterOption[] = [
+  //   {
+  //     label: 'Type',
+  //     labelKey: 'type',
+  //     type: 'radio', // Ensure this is explicitly one of the allowed values
+  //     options: { full_time: 'Full Time', part_time: 'Part Time' },
+  //   },
+  //   {
+  //     label: 'Department',
+  //     labelKey: 'department',
+  //     type: 'dropdown',
+  //     options: { hr: 'HR', engineering: 'Engineering', sales: 'Sales' },
+  //   },
+  //   {
+  //     label: 'Location',
+  //     labelKey: 'location',
+  //     type: 'checkbox',
+  //     options: { remote: 'Remote', onsite: 'Onsite' },
+  //   },
+  //   // {
+  //   //   label: 'Date',
+  //   //   labelKey: 'date',
+  //   //   type: 'date',
+  //   // },
+  //   // {
+  //   //   label: 'Date Range',
+  //   //   labelKey: 'date_range',
+  //   //   type: 'date_range',
+  //   // },
+  // ];
 
   return (
     <DataTable

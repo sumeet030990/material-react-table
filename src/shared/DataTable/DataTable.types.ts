@@ -22,4 +22,5 @@ export interface DataTableProps<TData extends MRT_RowData> {
   customButtonUi?: React.ReactNode; // Custom button UI
   tableTitle?: string; // Title for the table
   canExportExcel: boolean;
+  pageSize?: number; // Number of records per page
 }
